@@ -98,14 +98,44 @@ const testData = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
 //              sort the array by age
 // const tryThis = testData[2]["age"]
 
-function manipulateArray (arr, cb) {
+/* function manipulateObjInArr (arr, key, cb) {
 
-    // newArray = []
+    arr.forEach((objEntry) => {
 
-    arr.forEach()
+        console.log(objEntry[key])
+
+    })
+
+    arr.forEach(cb(objEntry))
+} */
+// manipulateObjInArr(testData, "age")
+
+function manipulateObjInArr (arr, callback) {
+
+    arr.forEach(callback)
+
 }
 
-console.log(manipulateArray(testData, "age", sort))
+function logAgesInObj (objEntry, keyName) {
+
+    const getObjectEntries = Object.entries(objEntry)
+    const getKey = getObjectEntries[keyName]
+
+}
+
+manipulateObjInArr(testData, logAgesInObj)
+
+/* function logEach (objEntry, keyName) {
+
+    const getObj = objEntry[keyName]
+
+    console.log(getObj)
+
+}
+
+manipulateObjInArr(testData, logEach) */
+
+
 
 //              filter array to remove entries with age greater than 50
 
